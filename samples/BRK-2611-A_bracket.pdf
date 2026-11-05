@@ -1,0 +1,46 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 842 595] /Resources << /Font << /F1 5 0 R >> >> /Contents 4 0 R >>
+endobj
+4 0 obj
+<< /Length 662 >>
+stream
+0.6 w 20 20 802 555 re S
+1.2 w 80 300 300 150 re S 120 340 m 120 410 l S 340 340 m 340 410 l S 100 470 m 360 470 l S
+0.8 w 470 30 342 174 re S
+BT /F1 10 Tf
+1 0 0 1 480 190 Tm (DREAMIT SAMPLE DRAWING - NOT A REAL COMPANY DRAWING) Tj
+1 0 0 1 480 174 Tm (TITLE: BRACKET, MOUNTING) Tj
+1 0 0 1 480 158 Tm (DWG NO: BRK-2611-A   REV: B) Tj
+1 0 0 1 480 142 Tm (MATERIAL: SS400) Tj
+1 0 0 1 480 126 Tm (FINISHED SIZE: t12 x 150 x 300) Tj
+1 0 0 1 480 110 Tm (STOCK SIZE: PL t12 x 160 x 310) Tj
+1 0 0 1 480 94 Tm (WEIGHT: 3.6 kg) Tj
+1 0 0 1 480 78 Tm (QTY: 1 EA) Tj
+1 0 0 1 480 62 Tm (SCALE 1:2   UNIT: mm) Tj
+1 0 0 1 480 46 Tm (NOTE: REMOVE ALL BURRS AND SHARP EDGES) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000000954 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+1051
+%%EOF

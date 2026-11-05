@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>기획서 — 도면 기반 원소재 단가 영향 분석</title>
+<meta name="robots" content="index,follow">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+<style>
+.plan-figs figure{margin:0 0 22px;} .plan-figs img{width:100%;height:auto;border:1px solid var(--line);border-radius:10px;background:#fff;}
+.plan-figs figcaption{font-size:13px;color:var(--sub);text-align:center;margin-top:6px;}
+.plan td{white-space:normal;} .plan td .btn{min-height:36px;white-space:nowrap;}
+h3{font-size:15px;margin:16px 0 6px;} main ul{margin:0 0 10px 20px;}
+</style>
+</head>
+<body>
+<nav class="topnav" aria-label="주요 메뉴">
+  <div class="topnav-inner">
+    <a class="topnav-brand" href="index.html">도면 기반 원소재 단가 영향 분석 <small>build-2611-12 · 기획 양재현</small></a>
+    <ul class="topnav-links">
+      <li><a href="index.html">도구</a></li>
+      <li><a href="guide.html">사용법</a></li>
+      <li><a href="plan.html" class="active" aria-current="page">기획서</a></li>
+    </ul>
+  </div>
+</nav>
+<header class="hero"><div class="wrap">
+  <div class="eyebrow">생성형 AI 업무자동화 전문가과정 · 2차수 · 프로젝트 12 · 기획서 v1.1</div>
+  <h1>도면 기반 원소재 단가 영향 분석 기획서</h1>
+  <p>도면 PDF 에서 재질·치수·중량을 읽고, 올린 원자재 가격 통합문서(실무 「원자재 가격 동향」 형식 포함)로 분석 기간의 가격 변동률을 구해 소재 원가 × 변동률만큼의 제품 단가 영향을 계산하는 브라우저 도구입니다. 규격 칸의 재질로 Index 를 맞추고, 맞는 Index 가 없으면 같은 계열 후보를 가격 움직임으로 비교해 추정으로 보여 줍니다.</p>
+</div></header>
+<main><div class="wrap">
+<div class="card">
+  <h2 style="margin-top:0">기획서 내려받기</h2>
+  <p class="sub">파이프라인 · 아키텍처 · 와이어프레임 · 개발일지가 들어간 워드 문서입니다. 버전마다 따로 남깁니다.</p>
+  <div class="tablewrap plan"><table><thead><tr><th>버전</th><th>날짜</th><th>바뀐 점</th><th>파일</th></tr></thead><tbody><tr><td><b>v1.1</b></td><td>2026-11-03</td><td>실무 「원자재 가격 동향」 통합문서 형식 읽기 — 시트 여러 장, A열 낱말 머리 블록, 병합 품목명, 연·월 결합(세로 병합 연도), 증감률·분기 열 제외, 최신이 위 정렬, PMI 「2026-5」 날짜 / Index 이름 = 품목 · 규격 · 기준 · 지역 · 단위, 규격 재질 일치 · xx 계열 일치 · 한국/KRW 우선 매칭 / 단위별 결과 표, 비철 원화 열 우선, 환율 시트 원화 환산(선택), 출처·상세출처 근거 표시, 사내 구매가 열은 참고 계열 / 가짜 예제 통합문서(시트 5장)와 4번째 예제 품목(SECC, 추정), 계산 테스트 115 · 화면 테스트 35</td><td><a class="btn primary" href="docs/기획서/build-2611-12_양재현_도면기반원소재단가영향분석_기획서_v1.1.docx" download>워드 내려받기</a></td></tr><tr><td><b>v1.0</b></td><td>2026-11-03</td><td>첫 판 — 도면 보조 추출·품목 원가 구성·Index 엑셀 매핑·정확/추정 매칭·기간 변동·단가 영향·검증·엑셀 보고서 / 기획서 워드 판·파이프라인·아키텍처·와이어프레임 추가</td><td><a class="btn primary" href="docs/기획서/build-2611-12_양재현_도면기반원소재단가영향분석_기획서_v1.0.docx" download>워드 내려받기</a></td></tr></tbody></table></div>
+</div>
+<div class="card plan">
+  <h2 style="margin-top:0">요구사항과 구현</h2>
+  <div class="tablewrap"><table><thead><tr><th>기획서 요구</th><th>구현</th></tr></thead><tbody><tr><td>도면 PDF 업로드 · 재질·규격·사용량 추출</td><td>pdf.js 동봉, 표제란 글자에서 후보와 출처 줄(보조 추출), 스캔은 직접 입력</td></tr><tr><td>Index 엑셀 업로드, 열·시트가 달라도 매칭</td><td>시트·날짜 열 고르기, 열마다 역할(Index·참고 계열·제외)과 재질 계열</td></tr><tr><td>(v1.1) 실무 원자재 가격 통합문서 그대로 읽기</td><td>시트 여러 장, A열 낱말 머리 블록, 병합 품목명 물려받기, 연·월 결합, 증감률·분기 열 제외, 최신이 위 정렬</td></tr><tr><td>(v1.1) 규격 재질로 정확 일치 · 단위 · 출처</td><td>규격 재질 일치 → xx 계열 일치 → 재질 계열, 한국·KRW/kg 우선, 단위별 표, 환율 시트 원화 환산(선택), 출처·상세출처 근거</td></tr><tr><td>정확 일치 Index 우선, 없으면 가격 움직임으로 유사 Index</td><td>같은 계열 후보 × 월간 변동률 상관 → 점수, 후보 3개 · 근거 · 신뢰도 · 고르기</td></tr><tr><td>유사성 낮으면 담당자 확인, 없으면 분석 불가</td><td>추정은 늘 담당자 확인, 후보 없음·재질 불명은 분석 불가, 여러 Index 일치는 선택 전 계산 안 함</td></tr><tr><td>시작·종료일 데이터 없으면 가까운 관측일 + 날짜 표시</td><td>가장 가까운 이전 월 사용, 사용 월 표시</td></tr><tr><td>소재 규격·절단 여유·수율·스크랩 회수</td><td>소재 규격 + 절단 여유 → 투입 중량, 유효 중량 = 투입 − 스크랩 × 회수율, 가정 기본값 표시</td></tr><tr><td>원가 증감액·영향률·소재 합산·가공비 등 별도</td><td>소재 원가 × 변동률, 단가 대비 영향률, 소재 줄 합산, 가공·인건·경비 분리</td></tr><tr><td>결과 검증 · 엑셀 보고서</td><td>설명 안 되는 차이 · 소재 하락·단가 상승 표시, 엑셀 6시트</td></tr></tbody></table></div>
+</div>
+<div class="card plan-figs"><h2 style="margin-top:0">그림으로 보기</h2><figure><img src="docs/img/pipeline.png" alt="처리 흐름(파이프라인)" loading="lazy"><figcaption>처리 흐름(파이프라인)</figcaption></figure><figure><img src="docs/img/architecture.png" alt="구성(아키텍처)" loading="lazy"><figcaption>구성(아키텍처)</figcaption></figure><figure><img src="docs/img/wireframe-1.png" alt="와이어프레임 — 도면 · 품목 · Index 화면" loading="lazy"><figcaption>와이어프레임 — 도면 · 품목 · Index 화면</figcaption></figure><figure><img src="docs/img/wireframe-2.png" alt="와이어프레임 — 매칭 · 결과 화면" loading="lazy"><figcaption>와이어프레임 — 매칭 · 결과 화면</figcaption></figure><figure><img src="docs/img/screen.png" alt="실제 화면(예제 데이터)" loading="lazy"><figcaption>실제 화면(예제 데이터)</figcaption></figure></div>
+<div class="card"><h2 style="margin-top:0">개발일지</h2><h3>2026-11-03 · 첫 판</h3><ul><li>패들릿 양재현 기획(도면 기반 원소재 가격 변동 · 제품 단가 영향 분석)을 작업 지시서(CLAUDE.md)로 옮기고 구현</li><li>계산 엔진 costidx.js — 재질 동의어, 도면 글자 추출, 중량, Index 읽기, 기간 값, 상관, 매칭, 단가 영향, 엑셀 시트</li><li>화면 — 보조 추출 · 품목 편집 · 매핑 표 · 매칭 카드 · 추이 · 폭포형 · 엑셀</li><li>계산 테스트 84 · 화면 테스트 30 통과</li></ul><h3>2026-11-03 · v1.1 — 실무 원자재 가격 통합문서</h3><ul><li>기획자 메일로 받은 실제 통합문서 구조(값은 받지 않음)를 읽도록 엔진에 inspectBook · buildBook · fxConvert 추가</li><li>규격 칸 재질로 Index 를 맞추는 단계(규격 재질 → 계열 → 재질 계열)와 한국·KRW/kg 우선</li><li>화면 — 시트별 열 표, 근거(출처·상세출처) 표시, 단위별 가격 변동 표, 원화 환산 선택</li><li>계산 테스트 115 · 화면 테스트 35 통과</li></ul></div>
+</div></main>
+<footer><div class="wrap">생성형 AI 업무자동화 전문가과정 · 2차수 · 프로젝트 12 · 기획 양재현 · <a href="https://build-2611-00.jobability.co.kr/">2차수 프로젝트 총괄</a></div></footer>
+</body>
+</html>

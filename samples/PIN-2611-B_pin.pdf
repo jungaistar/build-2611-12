@@ -1,0 +1,44 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 842 595] /Resources << /Font << /F1 5 0 R >> >> /Contents 4 0 R >>
+endobj
+4 0 obj
+<< /Length 707 >>
+stream
+0.6 w 20 20 802 555 re S
+1.2 w 80 330 330 70 re S 80 365 m 410 365 l S 555 365 m 555 384.33050000000003 539.3305 400 520 400 c 500.66949999999997 400 485 384.33050000000003 485 365 c 485 345.66949999999997 500.66949999999997 330 520 330 c 539.3305 330 555 345.66949999999997 555 365 c S
+0.8 w 470 30 342 142 re S
+BT /F1 10 Tf
+1 0 0 1 480 158 Tm (DREAMIT SAMPLE DRAWING - NOT A REAL COMPANY DRAWING) Tj
+1 0 0 1 480 142 Tm (TITLE: PIN, PIVOT) Tj
+1 0 0 1 480 126 Tm (DWG NO: PIN-2611-B   REV: A) Tj
+1 0 0 1 480 110 Tm (MATERIAL: SCM440H \(Q/T\)) Tj
+1 0 0 1 480 94 Tm (SIZE: Ø45 x 210 L) Tj
+1 0 0 1 480 78 Tm (STOCK: Ø50 x 215 L) Tj
+1 0 0 1 480 62 Tm (QTY: 2 EA) Tj
+1 0 0 1 480 46 Tm (HARDNESS: HRC 28-32) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000000999 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+1096
+%%EOF
